@@ -19,7 +19,7 @@ import java.util.Map;
  * @author Michael Baqadi
  */
 @RestController
-@RequestMapping("/vehicles")
+@RequestMapping("/codingchallenge/v1")
 public class VehicleController {
 
   @Autowired
