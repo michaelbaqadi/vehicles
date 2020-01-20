@@ -31,7 +31,7 @@ public class VehicleController {
    * @return the list
    */
   @GetMapping("/vehicles")
-  public List<Vehicle> getAllvehicles() {
+  public List<Vehicle> getAllVehicles() {
     return vehicleRepository.findAll();
   }
 
@@ -43,7 +43,7 @@ public class VehicleController {
    * @throws ResourceNotFoundException the resource not found exception
    */
   @GetMapping("/vehicles/{id}")
-  public ResponseEntity<Vehicle> getvehiclesById(@PathVariable(value = "id") Long vehicleId)
+  public ResponseEntity<Vehicle> getVehiclesById(@PathVariable(value = "id") Long vehicleId)
       throws ResourceNotFoundException {
     Vehicle vehicle =
         vehicleRepository
@@ -59,7 +59,7 @@ public class VehicleController {
    * @return the vehicle
    */
   @PostMapping("/vehicles")
-  public Vehicle createvehicle(@Valid @RequestBody Vehicle vehicle) {
+  public Vehicle createVehicle(@Valid @RequestBody Vehicle vehicle) {
     return vehicleRepository.save(vehicle);
   }
 
@@ -72,7 +72,7 @@ public class VehicleController {
    * @throws ResourceNotFoundException the resource not found exception
    */
   @PutMapping("/vehicles/{id}")
-  public ResponseEntity<Vehicle> updatevehicle(
+  public ResponseEntity<Vehicle> updateVehicle(
       @PathVariable(value = "id") Long vehicleId, @Valid @RequestBody Vehicle vehicleDetails)
       throws ResourceNotFoundException {
 
